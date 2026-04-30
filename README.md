@@ -124,13 +124,34 @@ Pipeline Plugin
 Email Extension Plugin
 Screenshots
 
+
+
 # Jenkins Page
 
-![Branches](screenshots/jenkins.png)
+![StudentForm](screenshots/serachStudent.png)
 
-# Jenkins console
+# WebhookConfig
 
-![Branches](screenshots/output.png)
+![webhook](screenshots/webhook.png)
+
+🔐 GitHub Secrets
+
+Configure secrets in:
+Settings → Secrets → Actions
+
+# SecretConfig
+
+![secretConfiguration](screenshots/gitSecretConfig.png)
+
+# Jenkins console Output StageWise
+
+![Checkout Stage](screenshots/checkout.png)
+
+![BuildStage](screenshots/BuildStage.png)
+
+![RunTests](screenshots/Test.png)
+
+![DeploymentStage](screenshots/DeployOutput.png)
 
 # 🚀 Flask CI/CD Pipeline using GitHub Actions
 ## 📌 Overview
@@ -171,7 +192,7 @@ Trigger: Push to staging branch
 
 ## Staging deployment
 
-![Staging](screenshots/Staging.png)
+![Staging](screenshots/StagingAction.png)
 
 
 # 🚀 5. Deploy to Production
@@ -179,21 +200,7 @@ Trigger: Release tag creation
 
 ## ProdDeploymentTrigger
 
-![Production](screenshots/ProdDeploymentTrigger.png)
-
-## ProdDeployment Output
-
-![ProductionDeployment](screenshots/ProductionDeploymentOutput.png)
-
-
-🔐 GitHub Secrets
-
-Configure secrets in:
-Settings → Secrets → Actions
-
-## Secrets
-
-![Production](screenshots/secretsconfiguration.png)
+![Production](screenshots/productionAction.png)
 
 
 Required secrets:
@@ -210,7 +217,6 @@ git push origin staging
 Create production release:
 git tag v1.0
 git push origin v1.0
-📸 Screenshots
 
 📌 Author
 
