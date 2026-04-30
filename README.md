@@ -93,34 +93,128 @@ project/
 └── .env
 ```
 
----
+# 🚀 Jenkins CI/CD Pipeline for Flask Application
 
-## Screenshots
-
-**Home Page**
-Lists all students with Edit/Delete buttons.
-- <img width="1902" height="607" alt="image" src="https://github.com/user-attachments/assets/a58a6a6d-4978-4769-8074-232e4d31e69d" />
-
-
-**Add Student**
-Form to add a new student.
-- <img width="1897" height="801" alt="image" src="https://github.com/user-attachments/assets/d65d25c3-ebb5-410a-adb1-e130ad7c5878" />
-
-
-**Update Student**
-Form pre-filled with student details.
-- <img width="1905" height="897" alt="image" src="https://github.com/user-attachments/assets/04febf01-879f-431f-ab07-abcfb993acf1" />
-
-
+## 📌 Overview
+This project demonstrates how to implement a **CI/CD pipeline using Jenkins** for a simple Flask web application.  
+The pipeline automates the process of building, testing, and deploying the application.
 
 ---
 
-## Notes
+## 🛠️ Tech Stack
+- Python 3
+- Flask
+- Pytest
+- Jenkins
+- GitHub
 
-* Make sure MongoDB is running and accessible via the URI in `.env`
-* Delete action includes a confirmation page to prevent accidental deletion
-* Uses `ObjectId` from `bson` to work with MongoDB document IDs
-* If you use MongoDB Atlas on macOS, install dependencies again (`pip install -r requirements.txt`). This project now uses `certifi` CA bundle explicitly to avoid common TLS certificate verification failures with `pymongo`.
+
+Start Jenkins:
+
+sudo systemctl start jenkins
+
+Access:
+
+http://<your-server-ip>:8080
+
+Install plugins:
+
+Git Plugin
+Pipeline Plugin
+Email Extension Plugin
+Screenshots
+
+# Jenkins Page
+
+![Branches](screenshots/jenkins.png)
+
+# Jenkins console
+
+![Branches](screenshots/output.png)
+
+# 🚀 Flask CI/CD Pipeline using GitHub Actions
+## 📌 Overview
+
+This project demonstrates a CI/CD pipeline for a Flask application using GitHub Actions.
+
+```
+📁 Project Structure
+flask-app/
+│── app.py
+│── requirements.txt
+│── test_app.py
+│── .github/workflows/ci-cd.yml
+│── README.md
+```
+⚙️ CI/CD Workflow
+
+The pipeline performs the following steps:
+
+✅ 1. Install Dependencies
+
+Installs required Python packages using pip.
+
+✅ 2. Run Tests
+
+Executes tests using pytest.
+
+✅ 3. Build
+
+Prepares application for deployment.
+
+## Branching UI
+
+![Branches](screenshots/branches.png)
+
+# 🚀 4. Deploy to Staging
+Trigger: Push to staging branch
+
+## Staging deployment
+
+![Staging](screenshots/Staging.png)
+
+
+# 🚀 5. Deploy to Production
+Trigger: Release tag creation
+
+## ProdDeploymentTrigger
+
+![Production](screenshots/ProdDeploymentTrigger.png)
+
+## ProdDeployment Output
+
+![ProductionDeployment](screenshots/ProductionDeploymentOutput.png)
+
+
+🔐 GitHub Secrets
+
+Configure secrets in:
+Settings → Secrets → Actions
+
+## Secrets
+
+![Production](screenshots/secretsconfiguration.png)
+
+
+Required secrets:
+
+STAGING_SERVER
+STAGING_SSH_KEY
+PROD_SERVER
+PROD_SSH_KEY
+API_TOKEN
+#🛠️ How to Run
+Push to staging:
+git checkout staging
+git push origin staging
+Create production release:
+git tag v1.0
+git push origin v1.0
+📸 Screenshots
+
+📌 Author
+
+Bindu Reddy
 
 ---
 
