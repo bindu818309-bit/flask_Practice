@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      MONGO_URI: mongodb+srv://bindu413_db_user:XhQq6geN0iJnBA5h@devopsherovired.thfhwft.mongodb.net/students_db
+      MONGO_URI: ${{ secrets.MONGO_URI }}
 
     steps:
       - name: Checkout Code
